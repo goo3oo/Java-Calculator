@@ -1,4 +1,5 @@
 package level3Calculator.core;
+
 import java.util.*;
 
 public class ComparedResultPrinter {
@@ -15,9 +16,9 @@ public class ComparedResultPrinter {
         System.out.println("비교할 값을 입력해주세요.");
         double number;
 
-        while(true) {
+        while (true) {
             String input = scan.nextLine();
-            if(isValidNumber(input)) {
+            if (isValidNumber(input)) {
                 number = Double.parseDouble(input);
 
                 List<Double> biggerNumber = results.stream()
@@ -31,19 +32,18 @@ public class ComparedResultPrinter {
                 }
 
                 break;
-            }else{
+            } else {
                 System.out.println("숫자를 입력해주세요.");
             }
         }
     }
 
 
-
-    public boolean isValidNumber(String input){
-        try{
+    public boolean isValidNumber(String input) {
+        try {
             Double.parseDouble(input);
             return true;
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             return false;
         }
     }
