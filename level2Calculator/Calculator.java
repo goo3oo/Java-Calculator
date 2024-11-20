@@ -1,9 +1,9 @@
 package level2Calculator;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Calculator {
-    private final ArrayList<Integer> resultArray = new ArrayList<Integer>();
+    private final List<Integer> resultArray = new ArrayList<Integer>();
 
     public void calculate(int num1, int num2, char operator) {
 
