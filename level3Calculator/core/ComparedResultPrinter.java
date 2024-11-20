@@ -21,7 +21,7 @@ public class ComparedResultPrinter {
                 number = Double.parseDouble(input);
 
                 List<Double> biggerNumber = results.stream()
-                        .filter(num -> num > number )
+                        .filter(num -> num > number)
                         .toList();
 
                 if (biggerNumber.isEmpty()) {
