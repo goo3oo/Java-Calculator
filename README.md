@@ -88,9 +88,9 @@ src
 - 입력값을 받아 연산을 수행.
 - 연산 결과를 CallbackResult 인터페이스를 통해 전달.
 
-+ 주요 기능:
-- 입력값의 타입을 판별(Integer, Double).
-- 연산자에 따라 적합한 연산 클래스(AddOperator, DivideOperator 등)를 생성하여 계산 수행.
+* 주요 기능:
+    + 입력값의 타입을 판별(Integer, Double).
+    + 연산자에 따라 적합한 연산 클래스(AddOperator, DivideOperator 등)를 생성하여 계산 수행.
 
 
 #### ComparedResultPrinter
