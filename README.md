@@ -19,32 +19,25 @@
 - **구현 방식**: switch문을 사용해 연산을 수행
 
 ## Level 2 - 클래스 분할
-<ul>
-<li>기능 확장</li>
-<ul>
-<li>연산 실행</li>
-<li>연산 결과 내역 저장 및 출력</li>
-<li>내역 삭제</li>
-</ul>
-<li>구현 방식</li>
-<ul>
-<li>클래스 분리(App와 Calculator) </li>
-<li>결과를 저장하기 위해 ArrayList 사용 </li>
-</ul>
-<li>추가된 주요 메서드</li>
-<ul>
-<li>calculate(): 연산 실행 및 결과 저장 </li>
-<li>getResultArray(): 결과 내역 출력 </li>
-<li>setResultArray(): 가장 오래된 내역 삭제 </li>
-</ul>
-</ul>
 
+- **기능 확장**
+    - 연산 실행
+    - 연산 결과 내역 저장 및 출력
+    - 내역 삭제
+
+- **구현 방식**
+    - 클래스 분리(App와 Calculator)
+    - 결과를 저장하기 위해 ArrayList 사용
+  
+- **추가된 주요 메서드**
+    - calculate(): 연산 실행 및 결과 저장 
+    - getResultArray(): 결과 내역 출력 
+    - setResultArray(): 가장 오래된 내역 삭제
 
 ## Level 3 - Java의 기능 활용
-<ul>
-<li>기능 확장: 컬렉션, 제네릭, 스트림, Enum 활용
-<li>패키지 구성:
-</ul>
+
+- **기능 확장**: 컬렉션, 제네릭, 스트림, Enum 활용 
+- **패키지 구성**:
 
 ```bash
 
@@ -70,17 +63,15 @@ src
 
 ## 클래스 및 역할 설명
 #### Main
-<ul>
-<li>계산기 프로그램의 진입점.
-<li>메뉴 실행(Calculator.run() 호출).
-</ul>
+
+- 계산기 프로그램의 진입점.
+- 메뉴 실행(Calculator.run() 호출)
 
 #### Calculator
-<ul>
-<li>사용자 입력을 받아 메뉴를 선택하고 실행.
-<li>연산 결과를 관리(ArrayList 사용).
-<li>ArithmeticCalculator와 ComparedResultPrinter 클래스와 상호작용.
-</ul>
+
+- 사용자 입력을 받아 메뉴를 선택하고 실행.
+- 연산 결과를 관리(ArrayList 사용).
+- ArithmeticCalculator와 ComparedResultPrinter 클래스와 상호작용.
 
 #### ArithmeticCalculator
 
@@ -92,49 +83,38 @@ src
 
 
 #### ComparedResultPrinter
-<ul>
-<li>입력값보다 큰 연산 결과만 필터링하여 출력.
-</ul>
+
+- 입력값보다 큰 연산 결과만 필터링하여 출력.
+
 
 #### InputValue
-<ul>
-<li>사용자 입력값을 받아 제네릭 타입으로 변환 후 전달.
-</ul>
+
+- 사용자 입력값을 받아 제네릭 타입으로 변환 후 전달.
+
 
 #### Operation 패키지
-<ul>
-<li>각 연산자별 연산 클래스를 정의.
-</ul>
 
+- 각 연산자별 연산 클래스를 정의.
 
 ## 구현 상세
-<ul>
-<li>제네릭 활용
-<ul>
-<li>InputValue 클래스에서 입력값의 타입(Integer, Double)을 판별하여 처리.
-</ul>
-<li>콜백 방식
-<ul>
-<li>연산 결과를 CallbackResult를 통해 전달하여 종속성을 줄임.
-</ul>
-<li>스트림 활용
-<ul>
-<li>결과 비교 시 필터링 및 리스트 변환 작업에 Stream 사용.
-</ul>
-</ul>
 
+- **제네릭 활용**
+    - InputValue 클래스에서 입력값의 타입(Integer, Double)을 판별하여 처리.
+- **콜백 방식**
+    - 연산 결과를 CallbackResult를 통해 전달하여 종속성을 줄임.
+- **스트림 활용**
+    - 결과 비교 시 필터링 및 리스트 변환 작업에 Stream 사용.
 
 ## 배운 점 및 개선점
 1. **배운 점:**
-<ul>
-<li>클래스 간 결합도를 줄이기 위해 인터페이스와 콜백을 활용하는 방법.
-<li>스트림을 사용하는 법.
-<li>구조를 짜기 전에 어떤 기능을 구현할지 명확히 해야 할 필요성.
-</ul>
+    - 클래스 간 결합도를 줄이기 위해 인터페이스와 콜백을 활용하는 방법. 
+    - 스트림을 사용하는 법.
+    - 구조를 짜기 전에 어떤 기능을 구현할지 명확히 해야 할 필요성.
+
 
 2. **개선점:**
-<ul>
-<li>입력값 타입에 따라 결과 출력 타입도 달라지도록 개선 필요.
-<li>리드미 작성과 트러블슈팅 기록에 더 많은 시간 투자.
-<li>제네릭의 의의에 맞는 사용.
-</ul>
+
+    - 입력값 타입에 따라 결과 출력 타입도 달라지도록 개선 필요.
+    - 리드미 작성과 트러블슈팅 기록에 더 많은 시간 투자.
+    - 제네릭의 의의에 맞는 사용.
+
