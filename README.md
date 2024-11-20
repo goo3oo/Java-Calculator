@@ -18,7 +18,7 @@
 - **기능**: 피연산자 2개와 연산자 1개를 입력받아 계산 결과를 출력
 - **구현 방식**: switch문을 사용해 연산을 수행
 
-### Level 2 - 클래스 분할
+## Level 2 - 클래스 분할
 <ul>
 <li>기능 확장</li>
 <ul>
@@ -40,8 +40,7 @@
 </ul>
 
 
-
-#### Level 3 - Java의 기능 활용
+## Level 3 - Java의 기능 활용
 <ul>
 <li>기능 확장: 컬렉션, 제네릭, 스트림, Enum 활용
 <li>패키지 구성:
@@ -69,21 +68,21 @@ src
 │   └── OperatorType.java
 ```
 
-#### 클래스 및 역할 설명
-##### Main
+## 클래스 및 역할 설명
+#### Main
 <ul>
 <li>계산기 프로그램의 진입점.
 <li>메뉴 실행(Calculator.run() 호출).
 </ul>
 
-##### Calculator
+#### Calculator
 <ul>
 <li>사용자 입력을 받아 메뉴를 선택하고 실행.
 <li>연산 결과를 관리(ArrayList 사용).
 <li>ArithmeticCalculator와 ComparedResultPrinter 클래스와 상호작용.
 </ul>
 
-##### ArithmeticCalculator
+#### ArithmeticCalculator
 <ul>
 <li>입력값을 받아 연산을 수행.
 <li>연산 결과를 CallbackResult 인터페이스를 통해 전달.
@@ -93,17 +92,17 @@ src
 </ul>
 </ul>
 
-#### ComparedResultPrinter
+### ComparedResultPrinter
 <ul>
 <li>입력값보다 큰 연산 결과만 필터링하여 출력.
 </ul>
 
-##### InputValue
+#### InputValue
 <ul>
 <li>사용자 입력값을 받아 제네릭 타입으로 변환 후 전달.
 </ul>
 
-##### Operation 패키지
+#### Operation 패키지
 <ul>
 <li>각 연산자별 연산 클래스를 정의.
 </ul>
