@@ -4,11 +4,9 @@ import java.util.*;
 
 public class ComparedResultPrinter {
 
-//    private final List<Double> results;
     private final CallbackResult callbackResult;
 
     public ComparedResultPrinter(CallbackResult callbackResult) {
-//        this.results = results;
         this.callbackResult = callbackResult;
     }
 
