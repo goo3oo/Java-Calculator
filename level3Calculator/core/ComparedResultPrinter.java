@@ -4,13 +4,17 @@ import java.util.*;
 
 public class ComparedResultPrinter {
 
-    private final List<Double> results;
+//    private final List<Double> results;
+    private final CallbackResult callbackResult;
 
-    public ComparedResultPrinter(List<Double> results) {
-        this.results = results;
+    public ComparedResultPrinter(CallbackResult callbackResult) {
+//        this.results = results;
+        this.callbackResult = callbackResult;
     }
 
     public void printResult() {
+        List<Double> results = callbackResult.getResult();
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("비교할 값을 입력해주세요.");

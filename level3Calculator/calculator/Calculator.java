@@ -16,7 +16,7 @@ public class Calculator implements CallbackResult {
 
     public Calculator() {
         arithmeticCalculator = new ArithmeticCalculator<>(this);// CallbackResult 를 전달빋는 ArithmeticCalculator 객체 생성
-        comparedResultPrinter = new ComparedResultPrinter(this.results); //멤버변수 results 를 전달받는 ComparedResultPrinter 객체 생성
+        comparedResultPrinter = new ComparedResultPrinter(this); //CallbackResult 를 전달받는 ComparedResultPrinter 객체 생성
     }
 
     // 인스턴스 CallbackResult 구현
@@ -25,6 +25,11 @@ public class Calculator implements CallbackResult {
     public void onCompleteResult(double result) {
         results.add(result);
     }   // 연산 결과를 list 에 추가
+
+    @Override
+    public List<Double> getResult() {
+        return results;
+    }   // results 리스트를 ComparedResultPrinter 에 전달
 
     //1번~3번 분기처리
     public void run() {
